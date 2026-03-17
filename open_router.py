@@ -1,7 +1,12 @@
 import requests
 
-# 🔑 Replace with your actual OpenRouter API key
-API_KEY = "your_openrouter_api_key_here"
+from dotenv import load_dotenv
+import os
+
+# Load environment variables
+load_dotenv()
+
+API_KEY = os.getenv("API_KEY")
 
 url = "https://openrouter.ai/api/v1/chat/completions"
 
